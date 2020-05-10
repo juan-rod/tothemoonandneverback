@@ -1,0 +1,86 @@
+@import 'reset.scss';
+
+$black-bg: rgba(29, 31, 33, 1);
+$ghost-white: #fcfdff;
+
+$grid-cols: 4;
+$grid-rows: 3;
+$grid-col-names: (a, b, c, d, e, f, g, h, i, j, k, l); // add more if needed
+$cell-width: percentage(1/$grid-cols);
+$cell-height: percentage(1/$grid-rows);
+@mixin modifier($name){
+  &--#{$name} {
+      @content;
+  }
+}
+
+@for $row from 1 through $grid-rows {
+  @for $col from 1 through $grid-cols {
+      // from modifier
+      @include modifier(from-#{nth($grid-col-names, $col)}#{$row}) {
+          display: block;
+          left: ($col - 1) * $cell-width;
+          top: ($row - 1) * $cell-height;
+      }
+
+      // to modifier
+      @include modifier(to-#{nth($grid-col-names, $col)}#{$row}) {
+          right: 100% - $col * $cell-width;
+          bottom: 100% - $row * $cell-height;
+      }
+  }
+}
+canvas#myCanvas {
+  // width: 100%;
+  // height: 428px;
+  width: auto;
+  height: auto;
+}
+img {
+  // width: 100%;
+}
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: $black-bg;
+  color: $ghost-white;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  display: grid;
+  // grid-template-columns: repeat($grid-cols,1fr);
+  // grid-template-rows: repeat($grid-rows,1fr);
+  .artboard {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 8px);
+    grid-template-rows: repeat(auto-fit, 8px);
+    // grid-auto-rows: min-content;
+    span {
+      border: 1px solid rgba(238, 238, 238, 0.329);
+    }
+    // span:nth-of-type(20) {
+    //   grid-column:50/60;
+    //   grid-row: 4/20;
+    //   background-color:red;
+    // }
+  }
+  .grid {
+    position: absolute;
+    display: none; // hide by default
+    overflow: hidden;
+  }
+  
+  .grid--from-b1 {
+      display: block;
+      left: 25%;
+      top: 0%;
+  }
+  
+  .grid--to-c1 {
+      right: 25%;
+      bottom: 66.6666666667%; 
+  }
+  
+}

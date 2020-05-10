@@ -1,0 +1,231 @@
+/* reset */
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  -webkit-padding-before: 0;
+  -webkit-padding-start: 0;
+  -webkit-padding-end: 0;
+  -webkit-padding-after: 0; }
+
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+*:active,
+*:hover {
+  outline: 0; }
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100%; }
+
+body {
+  position: relative;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+b, i, em, strong,
+h1, h2, h3, h4, h5, h6,
+th, td, pre, ins, del, address,
+input, select, button, textarea {
+  text-transform: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: normal;
+  letter-spacing: inherit; }
+
+textarea,
+input {
+  appearance: none;
+  background-clip: padding-box; }
+
+a, ins, del, button {
+  color: inherit;
+  text-decoration: none; }
+
+ul, ol,
+menu {
+  list-style: none; }
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0; }
+
+pre,
+textarea {
+  overflow: auto;
+  max-width: 100%; }
+
+img {
+  display: block;
+  width: auto;
+  height: auto; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+form {
+  width: 100%; }
+
+button {
+  cursor: pointer;
+  overflow: visible; }
+
+textarea {
+  resize: none; }
+
+::moz-focus-inner {
+  padding: 0;
+  border: none; }
+
+--from-a1 {
+  display: block;
+  left: 0%;
+  top: 0%; }
+
+--to-a1 {
+  right: 75%;
+  bottom: 66.66667%; }
+
+--from-b1 {
+  display: block;
+  left: 25%;
+  top: 0%; }
+
+--to-b1 {
+  right: 50%;
+  bottom: 66.66667%; }
+
+--from-c1 {
+  display: block;
+  left: 50%;
+  top: 0%; }
+
+--to-c1 {
+  right: 25%;
+  bottom: 66.66667%; }
+
+--from-d1 {
+  display: block;
+  left: 75%;
+  top: 0%; }
+
+--to-d1 {
+  right: 0%;
+  bottom: 66.66667%; }
+
+--from-a2 {
+  display: block;
+  left: 0%;
+  top: 33.33333%; }
+
+--to-a2 {
+  right: 75%;
+  bottom: 33.33333%; }
+
+--from-b2 {
+  display: block;
+  left: 25%;
+  top: 33.33333%; }
+
+--to-b2 {
+  right: 50%;
+  bottom: 33.33333%; }
+
+--from-c2 {
+  display: block;
+  left: 50%;
+  top: 33.33333%; }
+
+--to-c2 {
+  right: 25%;
+  bottom: 33.33333%; }
+
+--from-d2 {
+  display: block;
+  left: 75%;
+  top: 33.33333%; }
+
+--to-d2 {
+  right: 0%;
+  bottom: 33.33333%; }
+
+--from-a3 {
+  display: block;
+  left: 0%;
+  top: 66.66667%; }
+
+--to-a3 {
+  right: 75%;
+  bottom: 0%; }
+
+--from-b3 {
+  display: block;
+  left: 25%;
+  top: 66.66667%; }
+
+--to-b3 {
+  right: 50%;
+  bottom: 0%; }
+
+--from-c3 {
+  display: block;
+  left: 50%;
+  top: 66.66667%; }
+
+--to-c3 {
+  right: 25%;
+  bottom: 0%; }
+
+--from-d3 {
+  display: block;
+  left: 75%;
+  top: 66.66667%; }
+
+--to-d3 {
+  right: 0%;
+  bottom: 0%; }
+
+canvas#myCanvas {
+  width: auto;
+  height: auto; }
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: #1d1f21;
+  color: #fcfdff;
+  display: grid; }
+  .wrapper .artboard {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 8px);
+    grid-template-rows: repeat(auto-fit, 8px); }
+    .wrapper .artboard span {
+      border: 1px solid rgba(238, 238, 238, 0.329); }
+  .wrapper .grid {
+    position: absolute;
+    display: none;
+    overflow: hidden; }
+  .wrapper .grid--from-b1 {
+    display: block;
+    left: 25%;
+    top: 0%; }
+  .wrapper .grid--to-c1 {
+    right: 25%;
+    bottom: 66.6666666667%; }
+
